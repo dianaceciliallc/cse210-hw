@@ -24,7 +24,7 @@ public class Journal
         {
             for(int i = 0; i < _entries.Count; i++)
             {
-                writer.WriteLine($"{_entries[i]._date}|{_entries[i]._promptText}|{_entries[i]._entryText}");
+                writer.WriteLine($"\"{_entries[i]._date}\",\"{_entries[i]._promptText}\",\"{_entries[i]._entryText}\"");
             }
         }
     }
@@ -38,13 +38,13 @@ public class Journal
 
             while ( (line = reader.ReadLine()) != null )
             {
-                string[] parts = line.Split('|');
+                string[] parts = line.Split(',');
 
                 Entry newEntry = new Entry();
 
-                newEntry._date =  parts[0];
-                newEntry._promptText = parts[1];
-                newEntry._entryText = parts[2];
+                newEntry._date =  parts[0].Trim('"');
+                newEntry._promptText = parts[1].Trim('"');
+                newEntry._entryText = parts[2].Trim('"');
 
                 AddEntry(newEntry);
             }
