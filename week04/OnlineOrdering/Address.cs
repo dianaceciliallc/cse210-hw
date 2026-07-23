@@ -2,10 +2,10 @@ using System;
 
 public class Address
 {
-    string _address;
-    string _city;
-    string _state;
-    string _country;
+    private string _address;
+    private string _city;
+    private string _state;
+    private string _country;
 
     public Address(string address, string city, string state, string country)
     {

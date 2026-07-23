@@ -2,10 +2,10 @@ using System;
 
 public class Product
 {
-    string _name;
-    string _id;
-    double _price;
-    int _quantity;
+    private string _name;
+    private string _id;
+    private double _price;
+    private int _quantity;
 
     public Product(string name, string id, double price, int quantity)
     {

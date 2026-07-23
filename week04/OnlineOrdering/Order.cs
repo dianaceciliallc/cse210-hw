@@ -2,9 +2,9 @@ using System;
 
 public class Order
 {
-    Customer _customer;
-    List<Product> _products;
-    double _totalCost;
+    private Customer _customer;
+    private List<Product> _products;
+    private double _totalCost;
 
     public Order(Customer customer, List<Product> products)
     {
@@ -43,7 +43,7 @@ public class Order
         string label = "";
         foreach (Product item in _products)
         {
-            label += $"\n{item.GetDisplay()}";
+            label += $"{item.GetDisplay()}\n";
         }
         return label;
     }
