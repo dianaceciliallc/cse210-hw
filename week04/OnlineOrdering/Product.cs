@@ -1,0 +1,27 @@
+using System;
+
+public class Product
+{
+    string _name;
+    string _id;
+    double _price;
+    int _quantity;
+
+    public Product(string name, string id, double price, int quantity)
+    {
+        _name = name;
+        _id = id;
+        _price = price;
+        _quantity = quantity;
+    }
+
+    public double GetTotal()
+    {
+        return _price*_quantity;
+    }
+
+    public string GetDisplay()
+    {
+        return $"Product name: {_name}\nProduct ID: {_id}";
+    }
+}
